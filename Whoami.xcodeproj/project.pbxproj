@@ -16,6 +16,7 @@
 		1563617E13E9418E0086243C /* WhoamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563617D13E9418E0086243C /* WhoamiViewController.m */; };
 		1563618113E9418E0086243C /* WhoamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1563617F13E9418E0086243C /* WhoamiViewController.xib */; };
 		1563618813E941FC0086243C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1563618713E941FC0086243C /* CoreLocation.framework */; };
+		1563618A13E944420086243C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1563618913E944420086243C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1563617D13E9418E0086243C /* WhoamiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhoamiViewController.m; sourceTree = "<group>"; };
 		1563618013E9418E0086243C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WhoamiViewController.xib; sourceTree = "<group>"; };
 		1563618713E941FC0086243C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1563618913E944420086243C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1563618A13E944420086243C /* MapKit.framework in Frameworks */,
 				1563618813E941FC0086243C /* CoreLocation.framework in Frameworks */,
 				1563616B13E9418E0086243C /* UIKit.framework in Frameworks */,
 				1563616D13E9418E0086243C /* Foundation.framework in Frameworks */,
@@ -53,6 +56,7 @@
 		1563615B13E9418E0086243C = {
 			isa = PBXGroup;
 			children = (
+				1563618913E944420086243C /* MapKit.framework */,
 				1563618713E941FC0086243C /* CoreLocation.framework */,
 				1563617013E9418E0086243C /* Whoami */,
 				1563616913E9418E0086243C /* Frameworks */,

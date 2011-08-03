@@ -7,14 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
+
 
 @class WhoamiViewController;
 
 @interface WhoamiAppDelegate : UIResponder <UIApplicationDelegate>
-{
-    CLLocationManager *locationManager;
-}
+
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -22,16 +22,7 @@
     self.viewController = [[WhoamiViewController alloc] initWithNibName:@"WhoamiViewController" bundle:nil]; 
     self.window.rootViewController = self.viewController;
     
-    locationManager = [[CLLocationManager alloc] init];
-    
-    [locationManager setDelegate:self];
-    
-    [locationManager setDistanceFilter:kCLDistanceFilterNone];
-    
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    
-    [locationManager startUpdatingLocation];
-    
+   
     
     [self.window makeKeyAndVisible];
     return YES;
