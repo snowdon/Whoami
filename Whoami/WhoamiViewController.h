@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 
 @interface WhoamiViewController : UIViewController 
-<MKMapViewDelegate>
+<MKMapViewDelegate, UITextFieldDelegate>
 {
     CLLocationManager *locationManager;
     
@@ -19,5 +19,8 @@
     IBOutlet UIActivityIndicatorView *activityIndicator;
     IBOutlet UITextField *locationTitleField;
 }
+
+- (void)findLocation;
+- (void)foundLocation:(CLLocation *)loc;
 
 @end

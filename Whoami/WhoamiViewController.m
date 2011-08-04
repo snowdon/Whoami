@@ -7,8 +7,34 @@
 //
 
 #import "WhoamiViewController.h"
+#import "MapPoint.h"
 
 @implementation WhoamiViewController
+
+- (void)findLocation
+{
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
+    [locationTitleField setHidden:YES];
+}
+
+- (void)foundLocation:(CLLocation *)loc
+{
+    CLLocationCoordinate2D coord = [loc coordinate];
+    
+    MapPoint *mp = [[MapPoint alloc] initWithCoordinate:coord
+                                                  title:[locationTitleField text]];
+    
+    [worldView addAnnotation:mp];
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+    [worldView setRegion:region animated:YES];
+    
+    [locationTitleField setText:@""];
+    [activityIndicator stopAnimating];
+    [locationTitleField setHidden:NO];
+    [locationManager stopUpdatingLocation];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -17,6 +43,15 @@
 }
 
 #pragma mark - View lifecycle
+
+- (BOOL)textFieldShouldReturn:(UITextField *)tf
+{
+    [self findLocation];
+    
+    [tf resignFirstResponder];
+    
+    return YES;
+}
 
 - (void)viewDidLoad
 {
@@ -35,6 +70,20 @@
     [worldView setShowsUserLocation:YES]; 
     
     
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation 
+           fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"@", newLocation);
+    NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
+    
+    if (t < -180) {
+        return;
+    }
+    
+    [self foundLocation:newLocation];
 }
 
 

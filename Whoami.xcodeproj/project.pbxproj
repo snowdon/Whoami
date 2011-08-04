@@ -17,6 +17,7 @@
 		1563618113E9418E0086243C /* WhoamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1563617F13E9418E0086243C /* WhoamiViewController.xib */; };
 		1563618813E941FC0086243C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1563618713E941FC0086243C /* CoreLocation.framework */; };
 		1563618A13E944420086243C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1563618913E944420086243C /* MapKit.framework */; };
+		1563618D13E94CD00086243C /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1563618C13E94CD00086243C /* MapPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		1563618013E9418E0086243C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WhoamiViewController.xib; sourceTree = "<group>"; };
 		1563618713E941FC0086243C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1563618913E944420086243C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1563618B13E94CD00086243C /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		1563618C13E94CD00086243C /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +59,6 @@
 		1563615B13E9418E0086243C = {
 			isa = PBXGroup;
 			children = (
-				1563618913E944420086243C /* MapKit.framework */,
-				1563618713E941FC0086243C /* CoreLocation.framework */,
 				1563617013E9418E0086243C /* Whoami */,
 				1563616913E9418E0086243C /* Frameworks */,
 				1563616713E9418E0086243C /* Products */,
@@ -75,6 +76,8 @@
 		1563616913E9418E0086243C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1563618713E941FC0086243C /* CoreLocation.framework */,
+				1563618913E944420086243C /* MapKit.framework */,
 				1563616A13E9418E0086243C /* UIKit.framework */,
 				1563616C13E9418E0086243C /* Foundation.framework */,
 				1563616E13E9418E0086243C /* CoreGraphics.framework */,
@@ -85,6 +88,8 @@
 		1563617013E9418E0086243C /* Whoami */ = {
 			isa = PBXGroup;
 			children = (
+				1563618B13E94CD00086243C /* MapPoint.h */,
+				1563618C13E94CD00086243C /* MapPoint.m */,
 				1563617913E9418E0086243C /* WhoamiAppDelegate.h */,
 				1563617A13E9418E0086243C /* WhoamiAppDelegate.m */,
 				1563617C13E9418E0086243C /* WhoamiViewController.h */,
@@ -171,6 +176,7 @@
 				1563617713E9418E0086243C /* main.m in Sources */,
 				1563617B13E9418E0086243C /* WhoamiAppDelegate.m in Sources */,
 				1563617E13E9418E0086243C /* WhoamiViewController.m in Sources */,
+				1563618D13E94CD00086243C /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
